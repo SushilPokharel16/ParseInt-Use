@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1404.47">
+  <style type="text/css">
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#myForm").submit(function(){
+      // alert("this is test only");
+      var a = $("#first").val();
+      var b = $("#last").val();
+      var c = a +" "+ b;
+      // alert("full name")
+      $("#full_name").val(c);
+
+      var x = $("#myNumber").val();
+      var y = $("#second_number").val();
+      var z = parseInt(x) + parseInt(y);
+      $("#mySum").val(z);
+      // alert("this is summation");
+      return false;
+    });
+
+      $("#select_").change(function(){
+        var car = $("#select_").val();
+        $("#myCars").val(car);
+        alert("my new car")
+        return false;
+      });
+      $(".error").hide();
+      return false;
+  });
+</script>
+</head>
+<body>
+  <form class="" action="index.html" method="post" id="myForm">
+    <input type="text" name="" value="" id="first">
+    <input type="text" name="" value="" id="last">
+    <input type="text" name="" value="" id="full_name">
+    <input type="number" name="" value="" id="myNumber">
+    <input type="number" name="" value="" id="second_number">
+    <input type="text" name="" value="" id="mySum">
+
+      <select class="our_cars" name="" id="select_">
+        <option value="1">BMW</option>
+        <option value="2">LANDCRUISER</option>
+        <option value="3">CAMRY</option>
+      </select>
+      <input type="text" name="" value="" id="myCars">
+      <button type="submit" name="button" id="click">Click</button>
+      <button type="submit" name="button" id="btn">Submit</button>
+    </form>
+</body>
+</html>
